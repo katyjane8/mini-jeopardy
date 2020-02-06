@@ -1,0 +1,9 @@
+<h1>J Service</h1>
+<% @clues.each_with_index do |clue, i|%>
+  <h2><%= i + 1 %> - Clue: <%= clue["question"] %></h3>
+  <h4>Answer: <%= clue["answer"] %></h3>
+  <h4>Value: <%= clue["value"] %></h3>
+  <h4>Airdate: <%= clue["airdate"].to_date.strftime("%Y-%m-%d") %></h3>
+  <h4>Category: <%= clue["category"]["title"] %></h3>
+  <br>
+<%end%>
