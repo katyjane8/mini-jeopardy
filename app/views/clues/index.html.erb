@@ -1,9 +1,13 @@
-<h1>J Service</h1>
+<h1>Jeopardy!</h1>
+
 <% @clues.each_with_index do |clue, i|%>
-  <h2><%= i + 1 %> - Clue: <%= clue["question"] %></h3>
-  <h4>Answer: <%= clue["answer"] %></h3>
-  <h4>Value: <%= clue["value"] %></h3>
-  <h4>Airdate: <%= clue["airdate"].to_date.strftime("%Y-%m-%d") %></h3>
-  <h4>Category: <%= clue["category"]["title"] %></h3>
+  <h2><%= "Clue #{i+1}:"%> <%= clue["question"] %></h2>
+  <div class="answer"><h4>Answer: <%= clue["answer"] %></h4>
+  </div>
+  <button id="show">Show Answer</button>
+  <button id="hide">Hide Answer</button>
+  <h4>Value: <%= clue["value"] %></h4>
+  <h4>Airdate: <%= clue["airdate"].to_date.strftime("%Y-%m-%d") %></h4>
+  <h4>Category: <%= clue["category"]["title"] %></h4>
   <br>
 <%end%>
